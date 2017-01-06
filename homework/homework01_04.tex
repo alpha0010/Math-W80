@@ -1,0 +1,73 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+
+\noindent
+Math W80 Homework \hfill Micah Ng \hfill \today
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+\noindent
+Homework 1
+
+\begin{enumerate}
+\item
+  \begin{enumerate}
+  \item
+    \begin{align*}
+      \mathbf{v} &= c_1\mathbf{u}_1+c_2\mathbf{u}_2+\cdots+c_n\mathbf{u}_n \\
+      \langle\mathbf{v}, \mathbf{u}_j\rangle &= \langle c_1\mathbf{u}_1+\cdots+c_n\mathbf{u}_n, \mathbf{u}_j\rangle \\
+          &= \langle c_1\mathbf{u}_1, \mathbf{u}_j\rangle+\cdots+\langle c_n\mathbf{u}_n, \mathbf{u}_j\rangle \\
+          &= c_1\langle\mathbf{u}_1, \mathbf{u}_j\rangle+\cdots+c_n\langle\mathbf{u}_n, \mathbf{u}_j\rangle \\
+          &= c_j\langle\mathbf{u}_j, \mathbf{u}_j\rangle \tag{since $\mathbf{u}$ is pairwise orthogonal} \\
+      c_j &= \frac{\langle\mathbf{v}, \mathbf{u}_j\rangle}{|\mathbf{u}_j|^2}
+    \end{align*}
+
+  \item
+    \begin{align*}
+      \mathbf{0} &= c_1\mathbf{u}_1+\cdots+c_n\mathbf{u}_n \\
+      c_j &= \frac{\langle\mathbf{0}, \mathbf{u}_j\rangle}{|\mathbf{u}_j|^2} \\
+          &= 0
+    \end{align*}
+    Thus all coefficients must be 0, showing that
+    $\mathbf{u}_1,\ldots,\mathbf{u}_n$ are linearly independent.
+
+  \item
+    $\mathbf{U}^{-1}$ is the matrix with rows, in order,
+    $\frac{\mathbf{u}_1}{|\mathbf{u}_1|^2},\ldots,\frac{\mathbf{u}_n}{|\mathbf{u}_n|^2}$.
+    So, each cell of $\mathbf{U}^{-1}\mathbf{U}$ is
+    \begin{align*}
+      \left\langle\frac{\mathbf{u}_i}{|\mathbf{u}_i|^2},\mathbf{u}_j\right\rangle
+          &= \frac{\left\langle\mathbf{u}_i,\mathbf{u}_j\right\rangle}{|\mathbf{u}_i|^2}
+    \end{align*}
+    If $i=j$, then the cell is along the diagonal, and
+    $\frac{\left\langle\mathbf{u}_i,\mathbf{u}_i\right\rangle}{|\mathbf{u}_i|^2}=\frac{|\mathbf{u}_i|^2}{|\mathbf{u}_i|^2}=1$.
+    If $i\neq j$, then the cell is not on the diagonal, and
+    $\frac{\left\langle\mathbf{u}_i,\mathbf{u}_j\right\rangle}{|\mathbf{u}_i|^2}=\frac{0}{|\mathbf{u}_i|^2}=0$.
+
+    This verifies that $\mathbf{U}^{-1}\mathbf{U}=\mathbf{I}$ holds.
+  \end{enumerate}
+
+\item
+  \begin{enumerate}
+  \item
+    
+  \end{enumerate}
+\end{enumerate}
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+
+\end{document}
