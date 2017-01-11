@@ -1,0 +1,124 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+
+\noindent
+Math W80 Homework \hfill Micah Ng \hfill \today
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+\noindent
+Homework 3
+
+\begin{enumerate}
+\setcounter{enumi}{7}
+\item
+  \begin{enumerate}
+  \item
+    The limit points are the closed ball of radius $r$ about the origin.
+
+  \item
+    The only limit point is 0.
+
+  \item
+    There are no limit points.
+
+  \item
+    The limit points are $\mathbb{R}^n$.
+  \end{enumerate}
+
+\item
+  \begin{enumerate}
+  \item True.
+  \item True.
+  \item True.
+  \item True.
+  \item True.
+  \item True.
+  \item False.
+  \end{enumerate}
+
+\item
+  \begin{enumerate}
+  \item
+    $\mathbf{a}$ must be a limit point: $B_r(\mathbf{a})$ must contain at least
+    one point, distinct from $\mathbf{a}$, in $D$ for every $r>0$.
+
+  \item
+    $\forall\varepsilon>0,\exists\delta>0$ such that
+    $0<|\mathbf{x}-\mathbf{a}|<\delta$ implies $|f(\mathbf{x})-L|<\varepsilon$.
+
+  \item
+    $\forall\varepsilon>0,\exists\delta>0$ such that
+    $\mathbf{x}\in B_\delta(\mathbf{a}),\mathbf{x}\neq\mathbf{a}$ implies
+    $f(\mathbf{x})\in B_\varepsilon(\mathbf{L})$.
+  \end{enumerate}
+
+\item
+  \begin{enumerate}
+  \item Closed.
+  \item Both open and closed.
+  \item Neither open nor closed.
+  \item Open.
+  \item Closed.
+  \item Neither open nor closed.
+  \item Open.
+  \item Closed.
+  \item Closed.
+  \end{enumerate}
+
+\item Compact sets are: b, e, h, i
+
+\item
+  \begin{enumerate}
+  \item
+    $|\mathbf{x}_2-\mathbf{x}_1|$, $\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$
+
+  \item
+    $|\mathbf{x}_2-\mathbf{x}_1|$, $\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}$
+  \end{enumerate}
+  In $\mathbb{R}^n$: $|\mathbf{x}_2-\mathbf{x}_1|$,
+  $\sqrt{\sum_{i=1}^{n}(x_{2,i}-x_{1,i})^2}$
+
+\item
+  $f=s\circ(p\circ(\pi_1,\pi_1),p\circ(2,\pi_1,\pi_3,\pi_3)$ \\
+  Since $f$ is composed of continuous functions, $f$ is continuous.
+
+\end{enumerate}
+
+\newpage
+\noindent
+ACoSV
+
+\begin{enumerate}
+\item[I.7.6]
+  Let $\mathbf{a}$ be a boundary point of $D\subset\mathbb{R}^n$. Then either
+  $\mathbf{a}\in D$ or $\mathbf{a}\notin D$. \\
+  Suppose $\mathbf{a}\in D$. Then we are done. \\
+  Suppose $\mathbf{a}\notin D$. Then since $\mathbf{a}$ is a boundary point,
+  for every $r>0$, $B_r(\mathbf{a})$ contains at least one point of $D$. So
+  $\mathbf{a}$ is a limit point. \\
+  Thus every boundary point of $D$ is either in $D$, or a limit point of $D$.
+
+\item[I.8.4]
+  Suppose $f:\mathbb{R}^n\to\mathbb{R}^m$, and the inverse image
+  $f^{-1}(U)=\{\mathbf{x}\in\mathbb{R}^n|f(\mathbf{x})\in U\}$ is open for any
+  open set $U\subset\mathbb{R}^m$.
+\end{enumerate}
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+
+\end{document}
