@@ -1,0 +1,76 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+
+\noindent
+Math W80 Take Home \hfill Micah Ng \hfill \today
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+\begin{enumerate}
+\item[I.7.2]
+  \begin{description}
+  \item[Claim.]
+    $f(x,y,z)=x^2y+2xz^2$ is continuous at $(1,1,1)$.
+
+  \item[Proof.]
+    Check the value of $f$ at $(1,1,1)$.
+    \begin{align*}
+      f(1,1,1) &= 1^2(1)+2(1)1^2 \\
+          &= 3
+    \end{align*}
+
+    Compute the limit of $f$ at $(1,1,1)$.
+    \begin{align*}
+      |f(x,y,z)-3| &= \left|x^2y+2xz^2-3\right| \\
+          &= \left|\left(x^2y-y\right)+(y-1)+\left(2xz^2-2x\right)+(2x-2)\right| \\
+          &\leq \left|x^2y-y\right|+|y-1|+\left|2xz^2-2x\right|+|2x-2| \\
+          &= |y|\left|x^2-1\right|+|y-1|+2|x|\left|z^2-1\right|+2|x-1| \\
+          &= |y||x+1||x-1|+|y-1|+2|x||z+1||z-1|+2|x-1| \tag{1}
+    \end{align*}
+
+    Let $0<\delta<1$. Then $|(x,y,z)-(1,1,1)|<\delta$ implies:
+    \begin{align*}
+      |x-1| &< \delta \\
+      |x| &< 2 \\
+      |x+1| &< 3 \\
+      |y-1| &< \delta \\
+      |y| &< 2 \\
+      |z-1| &< \delta \\
+      |z+1| &< 3
+    \end{align*}
+
+    Substituting these facts into (1) results in:
+    \begin{align*}
+      |f(x,y,z)-3| &< 2(3)\delta+\delta+2(2)(3)\delta+2\delta \\
+          &= 21\delta
+    \end{align*}
+    Let $\varepsilon>0$ and $\delta=\min\left(1,\frac{\varepsilon}{21}\right)$.
+    Then $|(x,y,z)-(1,1,1)|<\delta$ implies \\
+    $|f(x,y,z)-3|<21\delta\leq\varepsilon$.
+
+    Thus,
+    \begin{align*}
+      \lim\limits_{(x,y,z)\to(1,1,1)}f(x,y,z) &= 3 \\
+          &= f(1,1,1)
+    \end{align*}
+    And so $f$ must be continuous at $(1,1,1)$. \hfill$\square$
+  \end{description}
+\end{enumerate}
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+
+\end{document}
