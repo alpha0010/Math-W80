@@ -1,0 +1,84 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+
+\noindent
+Math W80 Homework \hfill Micah Ng \hfill \today
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+\begin{enumerate}
+\item[18.]
+  Find tangent planes to the surface $z=Ax^2+By^2$.
+  \begin{align*}
+    G(x,y) &= \left(x,y,Ax^2+By^2\right) \\
+    G'(x,y) &= \begin{bmatrix}
+                 1 & 0 \\
+                 0 & 1 \\
+                 2Ax & 2By
+               \end{bmatrix} \\
+    G'(x,y)^\perp &= s\begin{bmatrix}
+                       2Ax \\
+                       2By \\
+                       -1
+                     \end{bmatrix}
+  \end{align*}
+  So by plugging in $x$ and $y$ to $G'(x,y)^\perp$, the tangent planes at
+  $\mathbf{p}_1=(0,0,0),\mathbf{p}_2=\left(a,0,Aa^2\right),$
+  $\mathbf{p}_3=\left(0,b,Bb^2\right)$ are:
+  \begin{align*}
+    P_1 :\hphantom{2AA^2}\ \begin{bmatrix}
+              0 & 0 & -1
+            \end{bmatrix}
+            \left(
+            \begin{bmatrix}
+              x \\ y \\ z
+            \end{bmatrix}
+            -
+            \begin{bmatrix}
+              0 \\ 0 \\ 0
+            \end{bmatrix}
+            \right) &= \begin{bmatrix} 0 \end{bmatrix} \\
+    P_2 :\ \begin{bmatrix}
+              2Aa & 0 & -1
+            \end{bmatrix}
+            \left(
+            \begin{bmatrix}
+              x \\ y \\ z
+            \end{bmatrix}
+            -
+            \begin{bmatrix}
+              a \\ 0 \\ Aa^2
+            \end{bmatrix}
+            \right) &= \begin{bmatrix} 0 \end{bmatrix} \\
+    P_3 :\ \begin{bmatrix}
+              0 & 2Bb & -1
+            \end{bmatrix}
+            \left(
+            \begin{bmatrix}
+              x \\ y \\ z
+            \end{bmatrix}
+            -
+            \begin{bmatrix}
+              0 \\ b \\ Bb^2
+            \end{bmatrix}
+            \right) &= \begin{bmatrix} 0 \end{bmatrix}
+  \end{align*}
+\end{enumerate}
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+
+\end{document}
