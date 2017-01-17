@@ -1,0 +1,180 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+
+\noindent
+Math W80 Homework \hfill Micah Ng \hfill \today
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+\noindent
+Homework 8
+
+\begin{enumerate}
+\setcounter{enumi}{17}
+\item
+  \begin{align*}
+    G(x,y) &= \left(x,y,Ax^2+By^2\right) \\
+    G'(x,y) &= \begin{bmatrix}
+                 1 & 0 \\
+                 0 & 1 \\
+                 2Ax & 2By
+               \end{bmatrix} \\
+    G'(x,y)^\perp &= s\begin{bmatrix}
+                       2Ax \\
+                       2By \\
+                       -1
+                     \end{bmatrix}
+  \end{align*}
+  \begin{align*}
+    P_1 :\hphantom{2AA^2}\ \begin{bmatrix}
+              0 & 0 & -1
+            \end{bmatrix}
+            \left(
+            \begin{bmatrix}
+              x \\ y \\ z
+            \end{bmatrix}
+            -
+            \begin{bmatrix}
+              0 \\ 0 \\ 0
+            \end{bmatrix}
+            \right) &= \begin{bmatrix} 0 \end{bmatrix} \\
+    P_2 :\ \begin{bmatrix}
+              2Aa & 0 & -1
+            \end{bmatrix}
+            \left(
+            \begin{bmatrix}
+              x \\ y \\ z
+            \end{bmatrix}
+            -
+            \begin{bmatrix}
+              a \\ 0 \\ Aa^2
+            \end{bmatrix}
+            \right) &= \begin{bmatrix} 0 \end{bmatrix} \\
+    P_3 :\ \begin{bmatrix}
+              0 & 2Bb & -1
+            \end{bmatrix}
+            \left(
+            \begin{bmatrix}
+              x \\ y \\ z
+            \end{bmatrix}
+            -
+            \begin{bmatrix}
+              0 \\ b \\ Bb^2
+            \end{bmatrix}
+            \right) &= \begin{bmatrix} 0 \end{bmatrix}
+  \end{align*}
+
+\item
+  \begin{align*}
+    f(x,y,z) &= xyz \\
+    \nabla f &= \begin{bmatrix} yz \\ xz \\ xy \end{bmatrix} \\
+    G(x,y,z) &= \begin{bmatrix}
+                  2yz+2xz+2xy-10 \\
+                  x-2y
+                \end{bmatrix} \\
+    \nabla G &= \begin{bmatrix}
+                  2y+2z & 1 \\
+                  2x+2z & -2 \\
+                  2x+2y & 0
+                \end{bmatrix} \\
+  yz &= \lambda_1(y+z)+\lambda_2 \\
+  xz &= \lambda_1(x+z)-2\lambda_2 \\
+  xy &= \lambda_1(x+y) \\
+  x &= 2y \\
+  10 &= 2yz+2xz+2xy \\
+  2y^2 &= 3\lambda_1 y \\
+  y &= \frac{3\lambda_1}{2} \\
+  x &= 3\lambda_1
+  \end{align*}
+\end{enumerate}
+
+%\newpage
+%\begin{center}
+%\line(1, 0){250}
+%\end{center}
+\noindent
+ACoSV II
+
+\begin{enumerate}
+\item[5.4]
+  Extreme distances from $\frac{x^2}{9}+\frac{y^2}{4}=1$ to $(1,1)$.
+  \begin{align*}
+    g(x,y) &= \frac{x^2}{9}+\frac{y^2}{4}-1 \\
+    \nabla g &= \begin{bmatrix}
+                  \frac{2x}{9} \\[0.3em]
+                  \frac{y}{2}
+                \end{bmatrix} \\
+    f(x,y) &= (x-1)^2+(y-1)^2 \tag{dist$^2$ maximizes dist} \\
+    \nabla f &= \begin{bmatrix}
+                  2x-2 \\
+                  2y-2
+                \end{bmatrix} \\
+    2x-2 &= \frac{\lambda 2x}{9} \tag{$\nabla f = \lambda\nabla g$} \\
+    9x-9 &= \lambda x \\
+    \lambda &= 9-\frac{9}{x} \\
+    2y-2 &= \frac{\lambda y}{2} \tag{$\nabla f = \lambda\nabla g$} \\
+    y(4-\lambda) &= 4 \\
+    y\left(\frac{9}{x}-5\right) &= 4
+  \end{align*}
+  Input into WolframAlpha:
+\begin{verbatim}
+solve {y*(9/x - 5) = 4, x^2/9 + y^2/4 = 1}
+\end{verbatim}
+  \begin{align*}
+    x \approx -2.90702 &\text{ and } y \approx -0.494074 \tag{max} \\
+    x \approx 1.24999 &\text{ and } y \approx 1.81812 \tag{min}
+  \end{align*}
+
+\item[5.6]
+  Box of maximum volume within
+  $\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$.
+  \begin{align*}
+    g(x,y,z) &= \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}-1 \\
+    \nabla g &= \begin{bmatrix}
+                  \frac{2x}{a^2} \\[0.3em]
+                  \frac{2y}{b^2} \\[0.3em]
+                  \frac{2z}{c^2}
+                \end{bmatrix} \\
+    f(x,y,z) &= 8xyz \\
+    \nabla f &= \begin{bmatrix}
+                  8yz \\
+                  8xz \\
+                  8xy
+                \end{bmatrix} \\
+  \end{align*}
+  \begin{align*}
+    yz &= \frac{\lambda x}{a^2} \tag{$\nabla f = \lambda\nabla g$} \\
+    xyz &= \frac{\lambda x^2}{a^2} \\
+    xz &= \frac{\lambda y}{b^2} \tag{$\nabla f = \lambda\nabla g$} \\
+    xyz &= \frac{\lambda y^2}{b^2} \\
+    \frac{\lambda x^2}{a^2} &= \frac{\lambda y^2}{b^2} \\
+    \frac{x^2}{a^2} &= \frac{y^2}{b^2} \\
+    xy &= \frac{\lambda z}{c^2} \tag{$\nabla f = \lambda\nabla g$} \\
+    xyz &= \frac{\lambda z^2}{c^2} \\
+    \frac{x^2}{a^2} &= \frac{z^2}{c^2} \\
+    1 &= \frac{x^2}{a^2}+\frac{x^2}{a^2}+\frac{x^2}{a^2} \\
+    \frac{a^2}{3} &= x^2 \\
+    x &= \frac{a}{\sqrt{3}}
+  \end{align*}
+  So box of maximum volume has a corner at
+  $\left(\frac{a}{\sqrt{3}},\frac{b}{\sqrt{3}},\frac{c}{\sqrt{3}}\right)$, and
+  is symmetric about the origin.
+\end{enumerate}
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+
+\end{document}
