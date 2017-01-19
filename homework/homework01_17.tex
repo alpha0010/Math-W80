@@ -1,0 +1,94 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+
+\noindent
+Math W80 Homework \hfill Micah Ng \hfill \today
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+\noindent
+Homework 10
+
+\begin{enumerate}
+\setcounter{enumi}{25}
+\item
+  \begin{enumerate}
+  \item
+    \begin{align*}
+      Q(x,y) &= \mathbf{x}^\top\mathbf{A}\mathbf{x} \\
+          &= \begin{bmatrix} x & y \end{bmatrix}
+             \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+             \begin{bmatrix} x \\ y \end{bmatrix} \\
+          &= \begin{bmatrix} ax+cy & bx+dy \end{bmatrix}
+             \begin{bmatrix} x \\ y \end{bmatrix} \\
+          &= ax^2+cxy+bxy+dy^2 \\
+          &= ax^2+(b+c)xy+dy^2
+    \end{align*}
+    Thus $Q(x,y)$ 0\textsuperscript{th}- nor 1\textsuperscript{st}-degree
+    terms.
+
+  \item
+    $Q(x,y)=y^2$ is neither positive definite, nor negative definite, nor
+    nondefinite, so taking its coefficients and the result from (a), one
+    corresponding matrix is
+    $\mathbf{A}=\left[\begin{smallmatrix} 0 & 2 \\ -2 & 1 \end{smallmatrix}\right]$.
+  \end{enumerate}
+
+\item
+  \begin{enumerate}
+  \item
+    \begin{align*}
+      f(x,y) &= ax^2+2bxy+cy^2 \\
+      f_x &= 2ax+2by \\
+      f_{xx} &= 2a \\
+      f_{xy} &= 2b \\
+      f_y &= 2bx+2cy \\
+      f_{yy} &= 2c \\
+      \mathbf{H}_f(x,y) &= \begin{bmatrix}
+                             2a & 2b \\
+                             2b & 2c
+                           \end{bmatrix}
+    \end{align*}
+
+  \item
+    \begin{align*}
+      q(x,y) &= \begin{bmatrix} x & y \end{bmatrix}
+                \begin{bmatrix} 2a & 2b \\ 2b & 2c \end{bmatrix}
+                \begin{bmatrix} x \\ y \end{bmatrix} \\
+          &= \begin{bmatrix} 2ax+2by & 2bx+2cy \end{bmatrix}
+             \begin{bmatrix} x \\ y \end{bmatrix} \\
+          &= 2ax^2+2bxy+2bxy+2cy^2 \\
+          &= 2ax^2+4bxy+2cy^2
+    \end{align*}
+  \end{enumerate}
+\end{enumerate}
+
+%\newpage
+\begin{center}
+\line(1, 0){250}
+\end{center}
+\noindent
+ACoSV II
+
+\begin{enumerate}
+\item[7.3]
+
+\end{enumerate}
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+
+\end{document}
