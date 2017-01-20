@@ -1,0 +1,69 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[left=1.00in, right=1.00in, top=1.00in, bottom=1.00in]{geometry}
+
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+
+\noindent
+Math W80 Homework \hfill Micah Ng \hfill \today
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+\begin{enumerate}
+\item[II.8.2]
+  \begin{enumerate}
+  \item
+    \begin{align*}
+      q(x,y,z) &= 2x^2+5y^2+2z^2+2xz \\
+          &= \begin{bmatrix}x & y & z\end{bmatrix}
+             \begin{bmatrix}
+               2 & 0 & 1 \\
+               0 & 5 & 0 \\
+               1 & 0 & 2
+             \end{bmatrix}
+             \begin{bmatrix}x \\ y \\ z\end{bmatrix}
+    \end{align*}
+
+  \item
+    \begin{align*}
+      |A_1| &= \begin{vmatrix}2\end{vmatrix} = 2 > 0 \\
+      |A_2| &= \begin{vmatrix}2 & 0 \\ 0 & 5 \end{vmatrix} = 10 > 0 \\
+      |A_3| &= 
+             \begin{vmatrix}
+               2 & 0 & 1 \\
+               0 & 5 & 0 \\
+               1 & 0 & 2
+             \end{vmatrix}
+            = 15 > 0
+    \end{align*}
+    Thus by theorem 8.8, $q$ is positive definite.
+
+  \item
+    \begin{align*}
+      0 &= \begin{vmatrix}
+             2-\lambda & 0 & 1 \\
+             0 & 5-\lambda & 0 \\
+             1 & 0 & 2-\lambda
+           \end{vmatrix} \\
+        &= (5-\lambda)((2-\lambda)(2-\lambda)-1) \\
+        &= (5-\lambda)\left(3-4\lambda+\lambda^2\right) \\
+        &= (5-\lambda)(3-\lambda)(1-\lambda)
+    \end{align*}
+    Eigenvalues, $1,3,5$, are all positive, so $q$ is positive definite.
+  \end{enumerate}
+\end{enumerate}
+
+\begin{center}
+\line(1, 0){250}
+\end{center}
+
+
+\end{document}
